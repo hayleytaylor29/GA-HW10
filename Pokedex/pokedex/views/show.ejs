@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokemon Info Page</h1>
+    <h1>
+        <%=allPokemon.name%>
+    </h1>
+    <p><img src="<%=allPokemon.img%>"></p>
+    <h2>
+        <ul>
+            Types:
+            <%for(let i = 0; i < allPokemon.type.length; i++) {%>
+                <li> 
+                    <%=allPokemon.type[i]%>
+                </li>
+            <% } %>
+        </ul>
+    </h2>
+    <h3>
+            Statistics: <br>
+            Hitpoints: <%=allPokemon.stats.hp%> <br>
+            Attack points: <%=allPokemon.stats.attack%> <br>
+            Defense points: <%=allPokemon.stats.defense%>
+    </h3>
+    
+</body>
+</html>
