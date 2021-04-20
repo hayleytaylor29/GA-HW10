@@ -9,30 +9,34 @@
         body {
             text-align: center;
         }
-        li {
+
+        div {
             display: inline-block;
+            border: solid black 2px;
+            border-radius: 20%;
+            padding: 10px;
         }
+        img {
+            height: 80px;
+            width: auto;
+        }
+
+
     </style>
 </head>
 <body>
     <h1>Welcome to Your Pokedex!</h1>
-    <form action="/" method="POST">
-        <label for="name">Pokemon Name</label>
-        <input type="text" name="name" id="name" placeholder="enter pokemon here"/>
-        <input type="submit" value="Add New Pokemon!">
-      </form>
-    <ul>
+     <h3> <a href="/pokemon/new">Create a New Pokemon!</a> </h3>
         <% for (let i = 0; i < 20; i++) { %>
-            <li>
-                <p><a href="/<%=[i]%>">
-                    <img src="<%=allPokemon[i].img%>">
-                </a>
+            <div>
+                <h3><%=allPokemon[i].name%> </h3>
+                <a href="/pokemon/<%=[i]%>"> <img src="<%=allPokemon[i].img%>"></a>
                 <br>
-                <%=allPokemon[i].name%>
-            </p>
-        </li>
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
        <% } %>
-        </ul>
+            
         
 </body>
 </html>

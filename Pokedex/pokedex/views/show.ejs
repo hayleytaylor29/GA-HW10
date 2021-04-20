@@ -19,26 +19,26 @@
 </head>
 <body>
     <h1>Pokemon Info Page</h1>
-    <h1>
-        <%=allPokemon.name%>
-    </h1>
+    <h1> <%=allPokemon.name%> </h1>
     <p><img src="<%=allPokemon.img%>"></p>
     <h2>
         <ul>
-            Types:
+            Type(s):
             <%for(let i = 0; i < allPokemon.type.length; i++) {%>
                 <li> 
-                    <%=allPokemon.type[i]%>
+                   <div id="type"> <%=allPokemon.type[i]%> </div>
                 </li>
             <% } %>
         </ul>
     </h2>
     <h3>
             Statistics: <br>
-            Hitpoints: <%=allPokemon.stats.hp%> <br>
-            Attack points: <%=allPokemon.stats.attack%> <br>
-            Defense points: <%=allPokemon.stats.defense%>
+            <div id="hitpoints"> Hitpoints: <%=allPokemon.stats.hp%></div>
+            <div id="attackPoints">Attack points: <%=allPokemon.stats.attack%></div>
+            <div id="defensePoints">Defense points: <%=allPokemon.stats.defense%></div>
     </h3>
-    
+    <p>
+        <a href="/pokemon">Back to Pokedex</a>
+    </p>
 </body>
 </html>

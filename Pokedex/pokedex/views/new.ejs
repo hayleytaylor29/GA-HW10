@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Pokemon</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a New Pokemon</h1>
+    <form action="/pokemon" method="POST">
+        <label for="name">Pokemon Name:</label>
+        <input type="text" name="name" id="newName" placeholder="name"/>
+        <br><br>
+        <label for="type">Pokemon Type(s):</label>
+        <input type="text" name="type" id="newType" placeholder="type"/>
+        <br><br>
+        <label for="hitpoints">Hitpoints:</label>
+        <input type="text" name="hitpoints" id="newHitpoints" placeholder="hitpoints">
+        <br><br>
+        <label for="attackpoints">Attack Points:</label>
+        <input type="text" name="attackPoints" id="newAttackPoints" placeholder="attack points">
+        <br><br>
+        <label for="defensepoints">Defense Hitpoints:</label>
+        <input type="text" name="defensePoints" id="newDefensePoints" placeholder="defense points">
+        <br><br>
+        <input type="submit" value="Add New Pokemon!">
+      </form>
+      <p>
+        <a href="/pokemon">Back to Pokedex</a>
+    </p>
+</body>
+</html>
